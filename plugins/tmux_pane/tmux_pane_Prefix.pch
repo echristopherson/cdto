@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'tmux_pane' target in the 'tmux_pane' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

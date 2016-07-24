@@ -17,6 +17,8 @@
 				69968DC418385C5700FB4A35 /* iTerm Plugin */,
 				69968DC618385CCB00FB4A35 /* X11 xterm */,
 				69968DC818385D2B00FB4A35 /* X11 xterm Plugin */,
+				071262051D447BAC0055AC8B /* Tmux pane */,
+				071262071D447BDF0055AC8B /* Tmux pane Plugin */,
 				69E2DFCC18386A4900B7DEA3 /* Sign apps */,
 			);
 			dependencies = (
@@ -24,6 +26,7 @@
 				69968DB918385A0500FB4A35 /* PBXTargetDependency */,
 				69968DBB18385A0500FB4A35 /* PBXTargetDependency */,
 				69968DBD18385A0500FB4A35 /* PBXTargetDependency */,
+				071262041D447B5B0055AC8B /* PBXTargetDependency */,
 			);
 			name = "cd to all";
 			productName = "cd to all";
@@ -31,6 +34,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		071262061D447BD30055AC8B /* cd to.app in Tmux pane */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* cd to.app */; };
+		071262111D447DA10055AC8B /* tmux_pane.bundle in Tmux pane Plugin */ = {isa = PBXBuildFile; fileRef = 071262021D447B470055AC8B /* tmux_pane.bundle */; };
 		69449AD20B8909A500A19631 /* CD2PluginProtocolV1.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */; };
 		6947E8C713DA6362008C982D /* lion.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6947E8C613DA6362008C982D /* lion.icns */; };
 		6963D7FD1835ED290039592E /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 6963D7FC1835ED290039592E /* LICENSE.md */; };
@@ -63,6 +68,20 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
+		071262011D447B470055AC8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071261FD1D447B470055AC8B /* tmux_pane.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
+			remoteInfo = tmux_pane;
+		};
+		071262031D447B5B0055AC8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071261FD1D447B470055AC8B /* tmux_pane.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = tmux_pane;
+		};
 		69449AA40B89080600A19631 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 69449A9C0B89080600A19631 /* terminal.xcodeproj */;
@@ -115,6 +134,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		071262051D447BAC0055AC8B /* Tmux pane */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = tmux_pane;
+			dstSubfolderSpec = 16;
+			files = (
+				071262061D447BD30055AC8B /* cd to.app in Tmux pane */,
+			);
+			name = "Tmux pane";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071262071D447BDF0055AC8B /* Tmux pane Plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "tmux_pane/cd to.app/Contents/Plugins";
+			dstSubfolderSpec = 16;
+			files = (
+				071262111D447DA10055AC8B /* tmux_pane.bundle in Tmux pane Plugin */,
+			);
+			name = "Tmux pane Plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		694495D00B869BB500A19631 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +235,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		071261FD1D447B470055AC8B /* tmux_pane.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tmux_pane.xcodeproj; path = plugins/tmux_pane/tmux_pane.xcodeproj; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -226,6 +268,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071261FE1D447B470055AC8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				071262021D447B470055AC8B /* tmux_pane.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +357,7 @@
 		694495BE0B869B3B00A19631 /* external projects */ = {
 			isa = PBXGroup;
 			children = (
+				071261FD1D447B470055AC8B /* tmux_pane.xcodeproj */,
 				69449A9C0B89080600A19631 /* terminal.xcodeproj */,
 				69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */,
 				69449D830B894DBF00A19631 /* iterm.xcodeproj */,
@@ -401,6 +452,10 @@
 					ProjectRef = 69449A9C0B89080600A19631 /* terminal.xcodeproj */;
 				},
 				{
+					ProductGroup = 071261FE1D447B470055AC8B /* Products */;
+					ProjectRef = 071261FD1D447B470055AC8B /* tmux_pane.xcodeproj */;
+				},
+				{
 					ProductGroup = 69449C0A0B892D0B00A19631 /* Products */;
 					ProjectRef = 69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */;
 				},
@@ -414,6 +469,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		071262021D447B470055AC8B /* tmux_pane.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = tmux_pane.bundle;
+			remoteRef = 071262011D447B470055AC8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		69449AA50B89080600A19631 /* terminal.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -464,10 +526,11 @@
 				"$(CONFIGURATION_BUILD_DIR)/terminal/cd to.app",
 				"$(CONFIGURATION_BUILD_DIR)/iterm/cd to.app",
 				"$(CONFIGURATION_BUILD_DIR)/x11_xterm/cd to.app",
+				"$(CONFIGURATION_BUILD_DIR)/tmux_pane/cd to.app",
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "echo \"sign $CONFIGURATION_BUILD_DIR/terminal/cd to.app\"\necho \"sign $CONFIGURATION_BUILD_DIR/iterm/cd to.app\"\necho \"sign $CONFIGURATION_BUILD_DIR/x11_xterm/cd to.app\"\n\ncodesign -s \"Developer ID Application: James Tuley (VURRGRYW45)\" \"$CONFIGURATION_BUILD_DIR/terminal/cd to.app\" \"$CONFIGURATION_BUILD_DIR/iterm/cd to.app\" \"$CONFIGURATION_BUILD_DIR/x11_xterm/cd to.app\"\n\nmkdir -p \"$TARGET_BUILD_DIR\"\nmv \"$CONFIGURATION_BUILD_DIR/terminal\" \"$TARGET_BUILD_DIR/terminal\"\nmv \"$CONFIGURATION_BUILD_DIR/iterm\" \"$TARGET_BUILD_DIR/iterm\"\nmv \"$CONFIGURATION_BUILD_DIR/x11_xterm\" \"$TARGET_BUILD_DIR/x11_xterm\"\n\n";
+			shellScript = "echo \"sign $CONFIGURATION_BUILD_DIR/terminal/cd to.app\"\necho \"sign $CONFIGURATION_BUILD_DIR/iterm/cd to.app\"\necho \"sign $CONFIGURATION_BUILD_DIR/x11_xterm/cd to.app\"\necho \"sign $CONFIGURATION_BUILD_DIR/tmux_pane/cd to.app\"\n\ncodesign -s \"Developer ID Application: James Tuley (VURRGRYW45)\" \"$CONFIGURATION_BUILD_DIR/terminal/cd to.app\" \"$CONFIGURATION_BUILD_DIR/iterm/cd to.app\" \"$CONFIGURATION_BUILD_DIR/x11_xterm/cd to.app\" \"$CONFIGURATION_BUILD_DIR/tmux_pane/cd to.app\"\n\nmkdir -p \"$TARGET_BUILD_DIR\"\nmv \"$CONFIGURATION_BUILD_DIR/terminal\" \"$TARGET_BUILD_DIR/terminal\"\nmv \"$CONFIGURATION_BUILD_DIR/iterm\" \"$TARGET_BUILD_DIR/iterm\"\nmv \"$CONFIGURATION_BUILD_DIR/x11_xterm\" \"$TARGET_BUILD_DIR/x11_xterm\"\nmv \"$CONFIGURATION_BUILD_DIR/tmux_pane\" \"$TARGET_BUILD_DIR/tmux_pane\"\n\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -485,6 +548,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		071262041D447B5B0055AC8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = tmux_pane;
+			targetProxy = 071262031D447B5B0055AC8B /* PBXContainerItemProxy */;
+		};
 		69968DB918385A0500FB4A35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = terminal;
